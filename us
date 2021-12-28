@@ -2196,6 +2196,8 @@ xkb_symbols "workman-compose" {
     key <AC10> {  [   i,  I   ] };
     key <AC11> {  [ quotedbl, apostrophe ] };
 
+    // Key left of Z, available on ISO keyboards
+    key <LSGT> {  [   backslash,   bar ]};
     key <AB01> {  [   z,  Z   ] };
     key <AB02> {  [   x,  X   ] };
     key <AB03> {  [   m,  M   ] };
