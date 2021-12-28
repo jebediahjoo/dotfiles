@@ -54,16 +54,10 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
-(use-package! zig-mode
-  :hook ((zig-mode . lsp-deferred))
-  :custom (zig-format-on-save nil)
-  :config
-  (after! lsp-mode
-    (add-to-list 'lsp-language-id-configuration '(zig-mode . "zig"))
-    (lsp-register-client
-      (make-lsp-client
-        :new-connection (lsp-stdio-connection "/home/monmon/.vscode/zigls")
-        :major-modes '(zig-mode)
-        :server-id 'zls))))
 
 (add-hook 'window-setup-hook #'toggle-frame-maximized)
+
+(setq doom-font (font-spec :family "JetBrains Mono" :size 16 :weight 'semi-bold)
+      doom-variable-pitch-font (font-spec :family "Fira Sans") ; inherits `doom-font''s :size
+      doom-unicode-font (font-spec :family "Fira Sans" :size 12)
+      doom-big-font (font-spec :family "Fira Mono" :size 19))
