@@ -22,8 +22,12 @@
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
 
- (setq doom-font (font-spec :family "monospace" :size 16 :weight 'semi-light)
-       doom-variable-pitch-font (font-spec :family "sans" :size 13))
+
+(setq doom-font (font-spec :family "JetBrains Mono" :size 16 :weight 'semi-bold)
+      doom-variable-pitch-font (font-spec :family "Fira Sans") ; inherits `doom-font''s :size
+      doom-unicode-font (font-spec :family "Fira Sans" :size 12)
+      doom-big-font (font-spec :family "Fira Mono" :size 19))
+
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
@@ -57,9 +61,7 @@
 
 (add-hook 'window-setup-hook #'toggle-frame-maximized)
 
-(setq doom-font (font-spec :family "JetBrains Mono" :size 16 :weight 'semi-bold)
-      doom-variable-pitch-font (font-spec :family "Fira Sans") ; inherits `doom-font''s :size
-      doom-unicode-font (font-spec :family "Fira Sans" :size 12)
-      doom-big-font (font-spec :family "Fira Mono" :size 19))
-
 (setq projectile-project-search-path '("~/Projects/" ))
+
+(setq term-char-mode-buffer-read-only nil
+      term-char-mode-point-at-process-mark nil)
