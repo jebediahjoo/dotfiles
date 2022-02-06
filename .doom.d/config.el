@@ -65,3 +65,27 @@
 
 (setq term-char-mode-buffer-read-only nil
       term-char-mode-point-at-process-mark nil)
+
+(map! :leader
+      :desc "evil-window-right"
+      "w <right>"
+      #'evil-window-right
+      )
+
+(map! :leader
+      :desc "evil-window-left"
+      "w <left>"
+      #'evil-window-left
+      )
+
+(map! :leader
+      :desc "evil-window-up"
+      "w <up>"
+      #'evil-window-up
+      )
+
+(map! :leader
+      :desc "evil-window-down"
+      "w <down>"
+      #'evil-window-down
+      )
